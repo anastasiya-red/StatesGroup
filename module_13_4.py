@@ -24,7 +24,7 @@ async def set_age(message):
     await UserState.age.set()
 
 @dp.message_handler()
-async def start_message(message):
+async def all_message(message):
     await message.answer("Введите команду /start, чтобы начать общение.")
 
 @dp.message_handler(state = UserState.age)
